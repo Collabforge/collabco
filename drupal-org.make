@@ -192,6 +192,10 @@ projects[mimemail][type] = module
 projects[mimemail][subdir] = contrib
 projects[mimemail][version] = 1.0-alpha2
 
+projects[module_filter][type] = module
+projects[module_filter][subdir] = contrib
+projects[module_filter][version] = 2.0-alpha2
+
 projects[node_convert][type] = module
 projects[node_convert][subdir] = contrib
 projects[node_convert][version] = 1.1
@@ -320,6 +324,10 @@ projects[views_slideshow][type] = module
 projects[views_slideshow][subdir] = contrib
 projects[views_slideshow][version] = 3.1
 
+projects[which_feature][type] = module
+projects[which_feature][subdir] = contrib
+projects[which_feature][download][type] = git
+projects[which_feature][download][revision] = 3ba19eea51aa288806c2c6f6032bcf6a92291f92
 
 
 ; Themes
