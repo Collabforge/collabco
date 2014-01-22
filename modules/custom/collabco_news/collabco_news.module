@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Collabco News feature.
+ */
+
+include_once 'collabco_news.features.inc';
