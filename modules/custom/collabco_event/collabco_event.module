@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Collabco Event feature.
+ */
+
+include_once 'collabco_event.features.inc';
