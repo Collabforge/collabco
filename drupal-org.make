@@ -335,7 +335,7 @@ projects[which_feature][download][revision] = 3ba19eea51aa288806c2c6f6032bcf6a92
 projects[open_framework][type] = theme
 projects[open_framework][subdir] = contrib
 projects[open_framework][download][url] = https://github.com/SU-SWS/open_framework.git
-projects[open_framework][download][tag] = 7.x-2.06
+projects[open_framework][download][revision] = 46fb729b7c2a4059ec26c17904a8767343fed15f
 
 
 
