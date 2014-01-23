@@ -290,7 +290,7 @@ projects[token][version] = 1.5
 projects[user_stats][type] = module
 projects[user_stats][subdir] = contrib
 projects[user_stats][download][type] = git
-projects[user_stats][download][revision] = cbee3ddbed0b34401a73520f77653cc81fb5c737
+projects[user_stats][download][revision] = 5bfdc7a70f1ef7c2bd7a4902c148f3af51cd1b3e
 
 projects[uuid][type] = module
 projects[uuid][subdir] = contrib
