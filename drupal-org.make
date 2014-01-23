@@ -259,6 +259,10 @@ projects[register_preapproved][version] = 1.0-beta2
 ; Add support for logintoboggan - https://drupal.org/node/2174669
 projects[register_preapproved][patch][] = https://drupal.org/files/issues/register_preapproved-logintoboggan-integration.patch
 
+projects[search_config][type] = module
+projects[search_config][subdir] = contrib
+projects[search_config][version] = 1.0
+
 projects[security_review][type] = module
 projects[security_review][subdir] = contrib
 projects[security_review][version] = 1.0
