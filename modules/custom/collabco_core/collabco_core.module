@@ -5,3 +5,33 @@
  */
 
 include_once 'collabco_core.features.inc';
+
+/**
+ * Include additional files.
+ */
+$dirname = dirname(__FILE__);
+$includes = file_scan_directory("{$dirname}/includes", '/.inc$/');
+foreach (module_list() as $module) {
+  if (isset($includes[$file = "{$dirname}/includes/{$module}.inc"])) {
+    require_once $file;
+  }
+}
+
+/**
+ * Transform underscored strings to camelcased strings.
+ *
+ * @param $string
+ *   The underscored string to be transformed.
+ * @param $ucfirst
+ *   A boolean value signifying whether the first characted should be
+ *   uppercased.
+ *
+ * @return
+ *   The transformed string.
+ */
+function collabco_core_underscores_to_camelcase($string, $ucfirst = FALSE) {
+  $parts = explode('_', $string);
+  $parts = $parts ? array_map('ucfirst', $parts) : array($string);
+  $parts[0] = $ucfirst ? ucfirst($parts[0]) : lcfirst($parts[0]);
+  return implode('', $parts);
+}
