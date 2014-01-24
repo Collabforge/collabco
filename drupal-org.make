@@ -339,11 +339,6 @@ projects[which_feature][download][revision] = 3ba19eea51aa288806c2c6f6032bcf6a92
 
 ; Themes
 
-projects[collabco_theme][type] = theme
-projects[collabco_theme][subdir] = contrib
-projects[collabco_theme][download][url] = https://github.com/Collabforge/collabco_theme.git
-projects[collabco_theme][download][revision] = 9ea6700e8355e19215cc8a0d812970877f8d56df
-
 projects[open_framework][type] = theme
 projects[open_framework][subdir] = contrib
 projects[open_framework][download][url] = https://github.com/SU-SWS/open_framework.git
