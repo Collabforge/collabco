@@ -43,3 +43,12 @@ function collabco_core_block_view($delta = '') {
   }
   return FALSE;
 }
+
+/**
+ * Implements hook_theme().
+ */
+function collabco_core_theme() {
+  $items = array();
+  drupal_alter('collabco_core_theme');
+}
+

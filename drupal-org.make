@@ -344,6 +344,10 @@ projects[open_framework][subdir] = contrib
 projects[open_framework][download][url] = https://github.com/SU-SWS/open_framework.git
 projects[open_framework][download][revision] = 46fb729b7c2a4059ec26c17904a8767343fed15f
 
+projects[collabco_theme][type] = theme
+projects[collabco_theme][subdir] = contrib
+projects[collabco_theme][download][url] = https://github.com/Collabforge/collabco_theme.git
+projects[collabco_theme][download][revision] = 9ea6700e8355e19215cc8a0d812970877f8d56df
 
 
 ; Libraries

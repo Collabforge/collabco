@@ -4,6 +4,9 @@
  * Code for the Collabco Core feature.
  */
 
+/**
+ * Features include.
+ */
 include_once 'collabco_core.features.inc';
 
 /**
