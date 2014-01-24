@@ -99,6 +99,8 @@ projects[features_extra][version] = 1.0-beta1
 projects[features][type] = module
 projects[features][subdir] = contrib
 projects[features][version] = 2.0-rc1
+; Cleaner .info file format - https://drupal.org/comment/8270327#comment-8270327
+projects[features][patch][] = https://drupal.org/files/issues/cleaner_info-2155793-1.patch
 
 projects[feeds][type] = module
 projects[feeds][subdir] = contrib
@@ -332,6 +334,7 @@ projects[which_feature][type] = module
 projects[which_feature][subdir] = contrib
 projects[which_feature][download][type] = git
 projects[which_feature][download][revision] = 3ba19eea51aa288806c2c6f6032bcf6a92291f92
+
 
 
 ; Themes
