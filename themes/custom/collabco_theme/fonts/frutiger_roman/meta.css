@@ -1,0 +1,396 @@
+/*
+ Orange: #ed6a26
+ Light Grey: #f2f2f2
+ */
+@font-face { 
+    font-family: 'Frutiger Roman';
+    src:url("/sites/members.meta.org.au/themes/openhub/fonts/frutiger_roman/frutiger_roman.eot");
+    src:url("/sites/members.meta.org.au/themes/openhub/fonts/frutiger_roman/frutiger_roman.eot?#iefix") format('embedded-opentype'),
+        url("/sites/members.meta.org.au/themes/openhub/fonts/frutiger_roman/frutiger_roman.woff") format('woff'),
+        url("/sites/members.meta.org.au/themes/openhub/fonts/frutiger_roman/frutiger_roman.ttf") format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+body {
+	background-color: #f2f2f2;
+	background-image: none;
+}
+
+/* Orange Sections */
+#block-views-slideshow-block {
+  background-color: #ed6a26;
+}
+
+#page-title {
+  color: #ed6a26;
+}
+
+.orange {
+	color:#ed6a26;
+}
+
+.conversationtitlediv {
+ 	color:#ed6a26;
+}
+
+#iin-profile-title {
+ 	background-color: #ed6a26;
+}
+.iin-feature h2 {
+  background-color: #ed6a26;
+}
+
+
+/**
+  Fonts
+  ---------------------------------------------
+*/
+
+body, p {
+	font-family: 'Frutiger Roman', sans-serif;
+	font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, .h5, .conversationtitlediv {
+	font-family: 'Frutiger Roman', sans-serif;
+	text-rendering: optimizelegibility;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+}
+h1 {
+	font-size: 1.9em;
+	line-height: 2.2;
+	text-transform: none;
+}
+
+h2 {
+	font-size: 1.45em;
+	text-transform: none;
+	line-height: 1.5;
+}
+
+h3 {
+	font-size:1.2em;
+	line-height: 1.5;
+}
+
+h4 {
+	font-size:1.4em;
+	line-height: 1.5;
+	font-weight: bold;
+}
+
+h5 {
+	font-size:1em;
+	line-height: 1.0;
+}
+
+.h5 {
+	font-size:0.9em;
+	line-height: 1.0;
+}
+
+.conversationtitlediv {
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+.iin-nav ul.nav li  {
+  background-image:url(../images/heroarrow.png);
+  background-repeat: no-repeat;
+  background-position: 0 .4em;
+}
+
+
+/**
+  LOGO, ICONS
+  ---------------------------------------------
+**/
+
+#met-logo a img {
+	margin: 10px 0px;
+}
+
+.cicon {
+/*	background-image: url(../images/conversation.png); max-width:100%;  */
+}
+
+.commentbubble {
+	background: url(../images/commentbubble.png) no-repeat top;
+}
+
+.commentbubble p {
+	margin-right: 8px;
+}
+
+.view-recent-activity .activity-details {
+	margin-left: 5px;
+	float: none;
+	padding-left: 55px;
+	width: 100%;
+}
+.view-recent-activity .activity-details > p {
+	margin-bottom: 0px;
+}
+.view-recent-activity .activity-details > em {
+	font-size: 12px;
+}
+
+
+/**
+  PAGE HEADERS
+  ---------------------------------------------
+**/
+
+.page-join-the-conversation {
+
+}
+
+.page-join-the-conversation .citon {
+
+}
+
+
+
+
+/**
+  THREADED COMMENTS
+  ---------------------------------------------
+**/
+#comments .comment{
+ background:#F3F3F3;
+ margin:0 0px 15px 0px;
+ padding:12px;
+}
+
+#comments .user-picture{
+ float:left;
+ width:55px;
+ height:55px;
+ padding:10px 0 0 10px;
+}
+
+#comments .comment .field-name-comment-body{
+ font-family: Helvetica, Arial, sans-serif;
+ font-weight: normal;
+ font-size: 12px;
+ color: #767676;
+ line-height: 1.5;
+}
+
+#comments h3{
+ font-family: 'Frutiger Roman', sans-serif;
+ font-size: 1.2em;
+ line-height: 1.5;
+ display:block;
+ padding-bottom:6px;
+ padding-left: 74px;
+ background: white;
+ margin-top: 0px;
+ margin-bottom:0px;
+ padding-top:4px;
+}
+
+#comments .submitted{
+ font-family: 'Frutiger Roman', sans-serif;
+ font-weight: normal;
+ font-size: 0.875em;
+ line-height: 1.5;
+ font-weight: bold;
+ font-style: italic;
+ padding-left: 74px;
+ background: white;
+ margin-bottom:0px;
+ padding-right:28px;
+}
+
+#comments .content{
+ background: white;
+ margin:0px;
+ padding:12px;
+}
+
+#comments .field-name-comment-body{
+ margin-bottom:0px;
+}
+
+#comments .links{
+ margin:10px 10px 0px 0px;
+ display:block;
+}
+
+/** 
+  Fixes for THREADED COMMENTS
+*/
+
+#comments .comment a.permalink {
+	display: none;
+}
+#comments .comment .content {
+	clear: both;
+}
+#comments .comment .field-name-comment-body {
+	padding-left: 0px;
+}
+#comments .comment .submitted {
+	height: 55px;
+}
+#comments .comment .submitted span a {
+	display: block;
+}
+
+.discussioncomment .commentquote {
+	float: none;
+	width: 100%;
+	clear: both;
+	padding-top: 5px;
+}
+
+
+/**
+  LOGIN PAGE
+  ---------------------------------------------
+**/
+.not-logged-in.page-user-register .container,
+.not-logged-in.page-user .container,
+.not-logged-in.page-user-password .container {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.not-logged-in.page-user-register #content #content-head,
+.not-logged-in.page-user #content #content-head,
+.not-logged-in.page-user-password #content #content-head {
+	margin-top: 10px;
+	background-image: url('/sites/members.meta.org.au/themes/openhub/meta-logo.png');
+	background-repeat: no-repeat;
+	background-position: center top;
+	padding-top: 100px;
+}
+
+.not-logged-in.page-user-register #content #content-head .title,
+.not-logged-in.page-user #content #content-head .title,
+.not-logged-in.page-user-password #content #content-head .title {
+	display: none;
+}
+
+.not-logged-in.page-user-register #content.mc-content,
+.not-logged-in.page-user #content.mc-content,
+.not-logged-in.page-user-password #content.mc-content {
+	width: 100%;
+	margin: 0 auto;
+	float: none;
+}
+
+
+.not-logged-in #content #content-head #page-title {
+	color: #6a6767;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 10px;
+	background-position: center top;
+}
+
+.not-logged-in #content #content-head .tabs .nav-tabs  {
+	border: none;
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+.not-logged-in #content #content-head .tabs .nav-tabs > li {
+	display: inline-block;
+	float: none;
+}
+
+.not-logged-in #content #content-head .tabs .nav-tabs > li > a {
+	padding: 0 0 5px 0 !important;
+	margin: 10px;
+	width: 120px;
+	color: #ed6a26;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+	padding: 0;
+	border: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+
+.not-logged-in #content #content-head .tabs .nav-tabs > li > a.active {
+	color: #6a6767;
+	background-color: inherit;
+	border-bottom: 3px solid #6a6767;
+}
+
+
+/**
+   JOIN THE CONVERSATION
+  ---------------------------------------------
+**/
+.page-conversations #block-system-main {
+	padding-top: 0px;
+}
+
+.page-conversations #block-block-10 {
+	margin: 5px 0;
+}
+
+.view-conversation-titles .views-row {
+	margin-bottom: 0;
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.view-join-the-conversation .current-conversation-title {
+
+}
+
+.view-join-the-coversation .views-field {
+	padding: 0;
+}
+
+.comment-bubble 
+{
+	position: relative;
+	width: 220px;
+	min-height:50px;
+	padding: 10px;
+	background: #f4f4f4;
+	border: #D0D0D0 solid 1px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.comment-bubble:before 
+{
+	content: "";
+	position: absolute;
+	top: -30px;
+	left: 16px;
+	border-style: solid;
+	border-width: 0 7px 29px;
+	border-color: #D0D0D0 transparent;
+	display: block;
+	width: 0;
+	z-index: 0;
+}
+.comment-bubble:after 
+{
+	content: "";
+	position: absolute;
+	top: -28px;
+	left: 16px;
+	border-style: solid;
+	border-width: 0 7px 29px;
+	border-color: #f4f4f4 transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+}
+
+
+

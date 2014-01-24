@@ -1,0 +1,114 @@
+
+html {
+  background-color: #D7D4CD;
+  background-image: url(../background.png);
+  background-repeat: repeat;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 76%;
+  text-align: center;
+  width: 50em;
+  margin: 5em auto;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+}
+
+.status {
+  color: #3a3;
+}
+
+.messages {
+  text-align: center;
+}
+
+form .messages, .messages ul {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 1em;
+  text-align: center;
+  background-color: orange;
+  color: #FFF;
+  padding: 10px;
+}
+
+form {
+  text-align: center;
+  margin: 1px auto;
+  background-color: #FFFFFF;
+  width: 50%;
+}
+
+form p {
+  font-weight: bold;
+  text-align: center;
+}
+
+div.form-item {
+  margin: 1em 0;
+}
+
+div.form-item .description {
+  font-size: 0.85em;
+  line-height: 150%;
+}
+
+label {
+  display: inline;
+}
+
+input {
+  width: 12em;
+}
+
+input.form-submit {
+  margin-bottom: 6px;
+}
+
+hr {
+  margin: 1px auto;
+  width: 50%;
+  display: none;
+}
+img.center {
+  display: block;
+  margin: 0  auto;
+  width:100%;
+}
+#securesite-user-login .item-list ul {
+  list-style-type: none;
+  float: right;
+  margin: 0;
+}
+
+#securesite-user-login span {
+  display: block;
+  clear: both;
+}
+
+html.js #securesite-user-login div#edit-openid-identifier-wrapper {
+  display: none;
+}
+
+html.js #securesite-user-login li.openid-link {
+  line-height: 170%;
+  padding: 0 0 0.2em 1.5em;
+  display: block;
+}
+
+#securesite-user-login li.openid-link, #securesite-user-login li.user-link {
+  display: none;
+}

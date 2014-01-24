@@ -4,14 +4,14 @@
  * Contains 'Header Profile' block class.
  */
 
-class collabcoBlock_HeaderProfile extends collabcoBlock {
+class collabcoBlock_ProfileHeader extends collabcoBlock {
 
   /**
    * Implements hook_block_info().
    */
   function info() {
     return parent::info(array(
-      'info' => t('Header Profile'),
+      'info' => t('Profile Header'),
       'cache' => DRUPAL_CACHE_GLOBAL,
     ));
   }
@@ -21,8 +21,9 @@ class collabcoBlock_HeaderProfile extends collabcoBlock {
    */
   function view() {
 		return array(
+			'title' => t('Profile_header'),
 			'content' => array(
-			  '#theme' => 'header_user_profile',
+			  '#theme' => 'profile_header_template',
 			  '#user_name' => $user->realname,
 			),
 		);
