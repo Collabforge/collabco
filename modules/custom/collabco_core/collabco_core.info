@@ -20,6 +20,7 @@ dependencies[] = colorbox_node
 dependencies[] = comment
 dependencies[] = comment_notify
 dependencies[] = contact
+dependencies[] = context
 dependencies[] = contextual
 dependencies[] = ctools
 dependencies[] = diff
@@ -41,6 +42,7 @@ dependencies[] = link
 dependencies[] = list
 dependencies[] = logintoboggan
 dependencies[] = mail_edit
+dependencies[] = menu
 dependencies[] = module_filter
 dependencies[] = node
 dependencies[] = og
@@ -77,12 +79,11 @@ dependencies[] = views_ui
 features[ckeditor_profile][] = Comments
 features[ckeditor_profile][] = Email
 features[ckeditor_profile][] = Full
-
+features[context][] = layout-global
+features[ctools][] = context:context:3
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
-
 features[features_api][] = api:2
-
 features[field_base][] = body
 features[field_base][] = field_areas_of_expertise
 features[field_base][] = field_business_position
@@ -124,15 +125,12 @@ features[filter][] = email
 features[filter][] = filtered_html
 features[filter][] = full_html
 features[filter][] = plain_text
-
 features[flag][] = follow
 features[flag][] = hide_content
-
 features[node][] = basic_page
 features[node][] = closed_group
 features[node][] = conversation
 features[node][] = knowledge_object
-
 features[og_features_permission][] = node:closed_group:add user
 features[og_features_permission][] = node:closed_group:administer group
 features[og_features_permission][] = node:closed_group:approve and deny subscription
@@ -190,11 +188,9 @@ features[user_permission][] = skip comment approval
 features[user_permission][] = subscribe to comments
 features[user_permission][] = use advanced search
 features[user_permission][] = use text format filtered_html
-
 features[user_role][] = Admin
 features[user_role][] = Community Moderator
 features[user_role][] = Content Manager
-
 features[variable][] = comment_anonymous_basic_page
 features[variable][] = comment_anonymous_closed_group
 features[variable][] = comment_anonymous_conversation
@@ -261,7 +257,6 @@ features[variable][] = site_403
 features[variable][] = table_trash_decorations
 features[variable][] = table_trash_global_settings
 features[variable][] = user_admin_role
-
 features[views_view][] = conversation_titles
 features[views_view][] = flag_follow
 features[views_view][] = join_the_conversation

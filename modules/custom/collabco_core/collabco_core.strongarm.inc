@@ -557,7 +557,7 @@ function collabco_core_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_403';
-  $strongarm->value = 'toboggan/denied';
+  $strongarm->value = 'user';
   $export['site_403'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -568,14 +568,14 @@ function collabco_core_strongarm() {
     1 => array(
       'decoration-params' => array(
         'search-box' => 0,
-        'column-reorder' => 1,
+        'column-reorder' => 0,
         'export-buttons' => 1,
         'pager-style' => '',
         'page-height' => '',
         'dont-sort-columns' => '',
         'x-scroll' => '',
         'fixed-left-columns' => '',
-        'fixed-header' => 1,
+        'fixed-header' => 0,
         'responsive' => array(
           'responsive-expand-col' => '1',
           'responsive-collapse-cols-phone' => '2',
