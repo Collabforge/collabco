@@ -49,6 +49,7 @@ function collabco_core_block_view($delta = '') {
  */
 function collabco_core_theme() {
   $items = array();
-  drupal_alter('collabco_core_theme');
+  drupal_alter('collabco_core_theme', $items);
+  return $items;
 }
 

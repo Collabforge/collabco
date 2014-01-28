@@ -21,7 +21,6 @@ class collabcoBlock_ProfileHeader extends collabcoBlock {
    */
   function view() {
 		return array(
-			'title' => t('Profile_header'),
 			'content' => array(
 			  '#theme' => 'profile_header_template',
 			  '#user_name' => $user->realname,
