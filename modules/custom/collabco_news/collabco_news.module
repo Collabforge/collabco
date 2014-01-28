@@ -4,4 +4,18 @@
  * Code for the Collabco News feature.
  */
 
+/**
+ * Features include.
+ */
 include_once 'collabco_news.features.inc';
+
+/**
+ * Include additional files.
+ */
+$dirname = dirname(__FILE__);
+$includes = file_scan_directory("{$dirname}/includes", '/.inc$/');
+foreach (module_list() as $module) {
+  if (isset($includes[$file = "{$dirname}/includes/{$module}.inc"])) {
+    require_once $file;
+  }
+}

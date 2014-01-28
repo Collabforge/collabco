@@ -134,7 +134,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h1';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
-  /* Field: Content: Description */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -543,7 +543,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h1';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
-  /* Field: Content: Description */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -800,7 +800,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['filters']['flagged']['field'] = 'flagged';
   $handler->display->display_options['filters']['flagged']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['filters']['flagged']['value'] = '0';
-  $handler->display->display_options['path'] = 'news-update';
+  $handler->display->display_options['path'] = 'news';
 
   /* Display: Latest Meta Update */
   $handler = $view->new_display('block', 'Latest Meta Update', 'recommended_metaupdate');
@@ -877,7 +877,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h1';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
-  /* Field: Content: Description */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -1183,7 +1183,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h1';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
-  /* Field: Content: Description */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
