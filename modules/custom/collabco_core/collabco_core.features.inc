@@ -48,7 +48,7 @@ function collabco_core_flag_default_flags() {
     'link_type' => 'toggle',
     'weight' => 0,
     'show_in_links' => array(
-      'full' => 'full',
+      'full' => 0,
       'teaser' => 0,
       'rss' => 0,
       'search_index' => 0,
@@ -76,7 +76,7 @@ function collabco_core_flag_default_flags() {
     'types' => array(
       0 => 'news_update',
     ),
-    'flag_short' => 'Hide this',
+    'flag_short' => 'Hide this<i class="icon-remove"></i>',
     'flag_long' => 'Do not show this news update again',
     'flag_message' => 'From now on this news update will be hidden from view.',
     'unflag_short' => 'Unhide this',
@@ -86,8 +86,8 @@ function collabco_core_flag_default_flags() {
     'link_type' => 'normal',
     'weight' => 0,
     'show_in_links' => array(
-      'full' => 'full',
       'teaser' => 'teaser',
+      'full' => 0,
       'rss' => 0,
       'search_index' => 0,
       'search_result' => 0,

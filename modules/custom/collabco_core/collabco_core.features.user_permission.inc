@@ -202,7 +202,9 @@ function collabco_core_user_default_permissions() {
   $permissions['delete own conversation content'] = array(
     'name' => 'delete own conversation content',
     'roles' => array(
-      'authenticated user' => 'authenticated user',
+      'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
     ),
     'module' => 'node',
   );

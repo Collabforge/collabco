@@ -273,7 +273,13 @@ function collabco_core_field_default_field_instances() {
   // Exported field_instance: 'node-conversation-body'
   $field_instances['node-conversation-body'] = array(
     'bundle' => 'conversation',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'summary' => '',
+        'value' => '<!-- Comment -->',
+        'format' => 'full_html',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -282,7 +288,14 @@ function collabco_core_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -299,7 +312,37 @@ function collabco_core_field_default_field_instances() {
     'label' => 'Description',
     'required' => 0,
     'settings' => array(
-      'display_summary' => 1,
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'email' => 'email',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'php_code' => 'php_code',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'email' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 0,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'display_summary' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -311,7 +354,7 @@ function collabco_core_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 31,
+      'weight' => 2,
     ),
   );
 
@@ -329,7 +372,17 @@ function collabco_core_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -361,7 +414,7 @@ function collabco_core_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 37,
+      'weight' => 5,
     ),
   );
 
@@ -379,7 +432,16 @@ function collabco_core_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 4,
+        'weight' => 2,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -402,7 +464,7 @@ function collabco_core_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 33,
+      'weight' => 4,
     ),
   );
 
@@ -422,7 +484,14 @@ function collabco_core_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 5,
+        'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -445,7 +514,7 @@ function collabco_core_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 36,
+      'weight' => 7,
     ),
   );
 
@@ -461,7 +530,14 @@ function collabco_core_field_default_field_instances() {
         'module' => 'og_ui',
         'settings' => array(),
         'type' => 'og_list_default',
-        'weight' => 3,
+        'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'og_ui',
+        'settings' => array(),
+        'type' => 'og_list_default',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -507,7 +583,7 @@ function collabco_core_field_default_field_instances() {
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 32,
+      'weight' => 3,
     ),
   );
 
@@ -632,10 +708,9 @@ function collabco_core_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'og_ui',
+        'label' => 'hidden',
         'settings' => array(),
-        'type' => 'og_list_default',
+        'type' => 'hidden',
         'weight' => 10,
       ),
       'teaser' => array(
@@ -899,6 +974,13 @@ function collabco_core_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'user',
     'field_name' => 'field_first_name',
@@ -953,6 +1035,13 @@ function collabco_core_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'full' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
@@ -1014,15 +1103,20 @@ function collabco_core_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 3,
       ),
     ),
     'entity_type' => 'user',
     'field_name' => 'field_provisional_organisation',
-    'label' => 'Tell us your organisation',
+    'label' => 'What is the name of your organisation',
     'required' => 1,
     'settings' => array(
       'better_formats' => array(
@@ -1077,6 +1171,13 @@ function collabco_core_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'og_ui',
+        'settings' => array(),
+        'type' => 'og_list_default',
+        'weight' => 5,
+      ),
+      'full' => array(
         'label' => 'above',
         'module' => 'og_ui',
         'settings' => array(),
@@ -1142,10 +1243,10 @@ function collabco_core_field_default_field_instances() {
   t('Last Name');
   t('Only make this available to the group(s):');
   t('Personal Bio');
-  t('Tell us your organisation');
   t('This information will not be visible to anyone except site administrators.');
   t('Upload files or media to share with one or more groups');
   t('Website');
+  t('What is the name of your organisation');
 
   return $field_instances;
 }

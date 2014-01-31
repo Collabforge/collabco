@@ -155,22 +155,8 @@ function collabco_core_ckeditor_profile_defaults() {
         'uicolor' => 'default',
         'uicolor_user' => 'default',
         'toolbar' => '[
-    [\'Source\'],
-    [\'Cut\',\'Copy\',\'Paste\',\'PasteText\',\'PasteFromWord\',\'-\',\'SpellChecker\', \'Scayt\'],
-    [\'Undo\',\'Redo\',\'Find\',\'Replace\',\'-\',\'SelectAll\',\'RemoveFormat\'],
-    [\'Image\',\'Media\',\'Flash\',\'Table\',\'HorizontalRule\',\'Smiley\',\'SpecialChar\',\'Iframe\'],
-    \'/\',
-    [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'-\',\'Subscript\',\'Superscript\'],
-    [\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\',\'Blockquote\',\'CreateDiv\'],
-    [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\',\'-\',\'BidiLtr\',\'BidiRtl\'],
-    [\'Link\',\'Unlink\',\'Anchor\', \'Linkit\'],
-    [\'DrupalBreak\'],
-    \'/\',
-    [\'Format\',\'Font\',\'FontSize\'],
-    [\'TextColor\',\'BGColor\'],
-    [\'Maximize\', \'ShowBlocks\']
-]
-    ',
+    [\'Format\',\'Bold\',\'Italic\',\'-\',\'NumberedList\',\'BulletedList\',\'-\',\'Link\',\'Unlink\',\'Image\']
+]',
         'expand' => 't',
         'width' => '100%',
         'lang' => 'en',
