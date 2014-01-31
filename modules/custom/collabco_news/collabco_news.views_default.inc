@@ -196,7 +196,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['picture']['exclude'] = TRUE;
   $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['picture']['image_style'] = 'user_thumb';
-  /* Field: Profile: Business Position */
+  /* Field: Field: Business Position */
   $handler->display->display_options['fields']['field_business_position_1']['id'] = 'field_business_position_1';
   $handler->display->display_options['fields']['field_business_position_1']['table'] = 'field_data_field_business_position';
   $handler->display->display_options['fields']['field_business_position_1']['field'] = 'field_business_position';
@@ -204,7 +204,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['field_business_position_1']['label'] = '';
   $handler->display->display_options['fields']['field_business_position_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_business_position_1']['element_label_colon'] = FALSE;
-  /* Field: Profile: Organisation */
+  /* Field: Field: Organisation */
   $handler->display->display_options['fields']['field_organisation_ref_1']['id'] = 'field_organisation_ref_1';
   $handler->display->display_options['fields']['field_organisation_ref_1']['table'] = 'field_data_field_organisation_ref';
   $handler->display->display_options['fields']['field_organisation_ref_1']['field'] = 'field_organisation_ref';
@@ -231,7 +231,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['picture_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['picture_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['picture_1']['image_style'] = 'user_thumb_small';
-  /* Field: Profile: Business Position */
+  /* Field: Field: Business Position */
   $handler->display->display_options['fields']['field_business_position']['id'] = 'field_business_position';
   $handler->display->display_options['fields']['field_business_position']['table'] = 'field_data_field_business_position';
   $handler->display->display_options['fields']['field_business_position']['field'] = 'field_business_position';
@@ -239,7 +239,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['field_business_position']['label'] = '';
   $handler->display->display_options['fields']['field_business_position']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_business_position']['element_label_colon'] = FALSE;
-  /* Field: Profile: Organisation */
+  /* Field: Field: Organisation */
   $handler->display->display_options['fields']['field_organisation_ref']['id'] = 'field_organisation_ref';
   $handler->display->display_options['fields']['field_organisation_ref']['table'] = 'field_data_field_organisation_ref';
   $handler->display->display_options['fields']['field_organisation_ref']['field'] = 'field_organisation_ref';
@@ -605,7 +605,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['picture']['exclude'] = TRUE;
   $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['picture']['image_style'] = 'user_thumb';
-  /* Field: Profile: Business Position */
+  /* Field: Field: Business Position */
   $handler->display->display_options['fields']['field_business_position_1']['id'] = 'field_business_position_1';
   $handler->display->display_options['fields']['field_business_position_1']['table'] = 'field_data_field_business_position';
   $handler->display->display_options['fields']['field_business_position_1']['field'] = 'field_business_position';
@@ -613,7 +613,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['field_business_position_1']['label'] = '';
   $handler->display->display_options['fields']['field_business_position_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_business_position_1']['element_label_colon'] = FALSE;
-  /* Field: Profile: Organisation */
+  /* Field: Field: Organisation */
   $handler->display->display_options['fields']['field_organisation_ref_1']['id'] = 'field_organisation_ref_1';
   $handler->display->display_options['fields']['field_organisation_ref_1']['table'] = 'field_data_field_organisation_ref';
   $handler->display->display_options['fields']['field_organisation_ref_1']['field'] = 'field_organisation_ref';
@@ -640,7 +640,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['picture_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['picture_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['picture_1']['image_style'] = 'user_thumb_small';
-  /* Field: Profile: Business Position */
+  /* Field: Field: Business Position */
   $handler->display->display_options['fields']['field_business_position']['id'] = 'field_business_position';
   $handler->display->display_options['fields']['field_business_position']['table'] = 'field_data_field_business_position';
   $handler->display->display_options['fields']['field_business_position']['field'] = 'field_business_position';
@@ -648,7 +648,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['field_business_position']['label'] = '';
   $handler->display->display_options['fields']['field_business_position']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_business_position']['element_label_colon'] = FALSE;
-  /* Field: Profile: Organisation */
+  /* Field: Field: Organisation */
   $handler->display->display_options['fields']['field_organisation_ref']['id'] = 'field_organisation_ref';
   $handler->display->display_options['fields']['field_organisation_ref']['table'] = 'field_data_field_organisation_ref';
   $handler->display->display_options['fields']['field_organisation_ref']['field'] = 'field_organisation_ref';
@@ -801,6 +801,12 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['filters']['flagged']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['filters']['flagged']['value'] = '0';
   $handler->display->display_options['path'] = 'news';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'News';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'menu-top-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
 
   /* Display: Latest Meta Update */
   $handler = $view->new_display('block', 'Latest Meta Update', 'recommended_metaupdate');
@@ -939,7 +945,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['picture']['exclude'] = TRUE;
   $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['picture']['image_style'] = 'user_thumb';
-  /* Field: Profile: Business Position */
+  /* Field: Field: Business Position */
   $handler->display->display_options['fields']['field_business_position_1']['id'] = 'field_business_position_1';
   $handler->display->display_options['fields']['field_business_position_1']['table'] = 'field_data_field_business_position';
   $handler->display->display_options['fields']['field_business_position_1']['field'] = 'field_business_position';
@@ -947,7 +953,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['field_business_position_1']['label'] = '';
   $handler->display->display_options['fields']['field_business_position_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_business_position_1']['element_label_colon'] = FALSE;
-  /* Field: Profile: Organisation */
+  /* Field: Field: Organisation */
   $handler->display->display_options['fields']['field_organisation_ref_1']['id'] = 'field_organisation_ref_1';
   $handler->display->display_options['fields']['field_organisation_ref_1']['table'] = 'field_data_field_organisation_ref';
   $handler->display->display_options['fields']['field_organisation_ref_1']['field'] = 'field_organisation_ref';
@@ -974,7 +980,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['picture_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['picture_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['picture_1']['image_style'] = 'user_thumb_small';
-  /* Field: Profile: Business Position */
+  /* Field: Field: Business Position */
   $handler->display->display_options['fields']['field_business_position']['id'] = 'field_business_position';
   $handler->display->display_options['fields']['field_business_position']['table'] = 'field_data_field_business_position';
   $handler->display->display_options['fields']['field_business_position']['field'] = 'field_business_position';
@@ -982,7 +988,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['field_business_position']['label'] = '';
   $handler->display->display_options['fields']['field_business_position']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_business_position']['element_label_colon'] = FALSE;
-  /* Field: Profile: Organisation */
+  /* Field: Field: Organisation */
   $handler->display->display_options['fields']['field_organisation_ref']['id'] = 'field_organisation_ref';
   $handler->display->display_options['fields']['field_organisation_ref']['table'] = 'field_data_field_organisation_ref';
   $handler->display->display_options['fields']['field_organisation_ref']['field'] = 'field_organisation_ref';
@@ -1245,7 +1251,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['picture']['exclude'] = TRUE;
   $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['picture']['image_style'] = 'user_thumb';
-  /* Field: Profile: Business Position */
+  /* Field: Field: Business Position */
   $handler->display->display_options['fields']['field_business_position_1']['id'] = 'field_business_position_1';
   $handler->display->display_options['fields']['field_business_position_1']['table'] = 'field_data_field_business_position';
   $handler->display->display_options['fields']['field_business_position_1']['field'] = 'field_business_position';
@@ -1253,7 +1259,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['field_business_position_1']['label'] = '';
   $handler->display->display_options['fields']['field_business_position_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_business_position_1']['element_label_colon'] = FALSE;
-  /* Field: Profile: Organisation */
+  /* Field: Field: Organisation */
   $handler->display->display_options['fields']['field_organisation_ref_1']['id'] = 'field_organisation_ref_1';
   $handler->display->display_options['fields']['field_organisation_ref_1']['table'] = 'field_data_field_organisation_ref';
   $handler->display->display_options['fields']['field_organisation_ref_1']['field'] = 'field_organisation_ref';
@@ -1280,7 +1286,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['picture_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['picture_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['picture_1']['image_style'] = 'user_thumb_small';
-  /* Field: Profile: Business Position */
+  /* Field: Field: Business Position */
   $handler->display->display_options['fields']['field_business_position']['id'] = 'field_business_position';
   $handler->display->display_options['fields']['field_business_position']['table'] = 'field_data_field_business_position';
   $handler->display->display_options['fields']['field_business_position']['field'] = 'field_business_position';
@@ -1288,7 +1294,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['field_business_position']['label'] = '';
   $handler->display->display_options['fields']['field_business_position']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_business_position']['element_label_colon'] = FALSE;
-  /* Field: Profile: Organisation */
+  /* Field: Field: Organisation */
   $handler->display->display_options['fields']['field_organisation_ref']['id'] = 'field_organisation_ref';
   $handler->display->display_options['fields']['field_organisation_ref']['table'] = 'field_data_field_organisation_ref';
   $handler->display->display_options['fields']['field_organisation_ref']['field'] = 'field_organisation_ref';
@@ -1678,7 +1684,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['created']['exclude'] = TRUE;
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'long';
-  /* Field: Profile: Business Position */
+  /* Field: Field: Business Position */
   $handler->display->display_options['fields']['field_business_position']['id'] = 'field_business_position';
   $handler->display->display_options['fields']['field_business_position']['table'] = 'field_data_field_business_position';
   $handler->display->display_options['fields']['field_business_position']['field'] = 'field_business_position';
@@ -1686,7 +1692,7 @@ function collabco_news_views_default_views() {
   $handler->display->display_options['fields']['field_business_position']['label'] = '';
   $handler->display->display_options['fields']['field_business_position']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_business_position']['element_label_colon'] = FALSE;
-  /* Field: Profile: Organisation */
+  /* Field: Field: Organisation */
   $handler->display->display_options['fields']['field_organisation_ref']['id'] = 'field_organisation_ref';
   $handler->display->display_options['fields']['field_organisation_ref']['table'] = 'field_data_field_organisation_ref';
   $handler->display->display_options['fields']['field_organisation_ref']['field'] = 'field_organisation_ref';

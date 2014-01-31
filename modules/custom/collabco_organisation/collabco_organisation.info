@@ -6,6 +6,7 @@ version = 7.x-1.0
 project = collabco_organisation
 dependencies[] = addressfield
 dependencies[] = collabco_core
+dependencies[] = text
 dependencies[] = views
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0

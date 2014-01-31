@@ -758,9 +758,9 @@ function collabco_core_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'profile2-profile-field_areas_of_expertise'
-  $field_instances['profile2-profile-field_areas_of_expertise'] = array(
-    'bundle' => 'profile',
+  // Exported field_instance: 'user-user-field_areas_of_expertise'
+  $field_instances['user-user-field_areas_of_expertise'] = array(
+    'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -769,16 +769,16 @@ function collabco_core_field_default_field_instances() {
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 7,
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 9,
       ),
     ),
-    'entity_type' => 'profile2',
+    'entity_type' => 'user',
     'field_name' => 'field_areas_of_expertise',
     'label' => 'Areas of Expertise',
     'required' => 0,
     'settings' => array(
-      'user_register_form' => FALSE,
+      'user_register_form' => 0,
     ),
     'widget' => array(
       'active' => 0,
@@ -788,13 +788,13 @@ function collabco_core_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 6,
+      'weight' => 10,
     ),
   );
 
-  // Exported field_instance: 'profile2-profile-field_business_position'
-  $field_instances['profile2-profile-field_business_position'] = array(
-    'bundle' => 'profile',
+  // Exported field_instance: 'user-user-field_business_position'
+  $field_instances['user-user-field_business_position'] = array(
+    'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -804,16 +804,17 @@ function collabco_core_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 6,
       ),
     ),
-    'entity_type' => 'profile2',
+    'entity_type' => 'user',
     'field_name' => 'field_business_position',
     'label' => 'Business Position',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'email' => 'email',
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
           'php_code' => 'php_code',
@@ -823,6 +824,9 @@ function collabco_core_field_default_field_instances() {
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'email' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -839,7 +843,7 @@ function collabco_core_field_default_field_instances() {
         ),
       ),
       'text_processing' => 0,
-      'user_register_form' => FALSE,
+      'user_register_form' => 0,
     ),
     'widget' => array(
       'active' => 1,
@@ -848,13 +852,13 @@ function collabco_core_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 0,
+      'weight' => 7,
     ),
   );
 
-  // Exported field_instance: 'profile2-profile-field_external_link'
-  $field_instances['profile2-profile-field_external_link'] = array(
-    'bundle' => 'profile',
+  // Exported field_instance: 'user-user-field_external_link'
+  $field_instances['user-user-field_external_link'] = array(
+    'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -864,10 +868,10 @@ function collabco_core_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 9,
+        'weight' => 7,
       ),
     ),
-    'entity_type' => 'profile2',
+    'entity_type' => 'user',
     'field_name' => 'field_external_link',
     'label' => 'Website',
     'required' => 0,
@@ -888,7 +892,7 @@ function collabco_core_field_default_field_instances() {
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
-      'user_register_form' => FALSE,
+      'user_register_form' => 0,
       'validate_url' => 0,
     ),
     'widget' => array(
@@ -896,67 +900,7 @@ function collabco_core_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'profile2-profile-field_personal_bio'
-  $field_instances['profile2-profile-field_personal_bio'] = array(
-    'bundle' => 'profile',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 5,
-      ),
-    ),
-    'entity_type' => 'profile2',
-    'field_name' => 'field_personal_bio',
-    'label' => 'Personal Bio',
-    'required' => 0,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 0,
-          'php_code' => 0,
-          'plain_text' => 0,
-        ),
-        'allowed_formats_toggle' => 1,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 0,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 8,
     ),
   );
 
@@ -1091,6 +1035,109 @@ function collabco_core_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_organisation_ref'
+  $field_instances['user-user-field_organisation_ref'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 10,
+      ),
+    ),
+    'entity_type' => 'user',
+    'entityconnect_unload_add' => 0,
+    'entityconnect_unload_edit' => 0,
+    'field_name' => 'field_organisation_ref',
+    'label' => 'Organisation',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_personal_bio'
+  $field_instances['user-user-field_personal_bio'] = array(
+    'bundle' => 'user',
+    'default_value' => array(
+      0 => array(
+        'value' => '',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_personal_bio',
+    'label' => 'Personal Bio',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'email' => 0,
+          'filtered_html' => 'filtered_html',
+          'full_html' => 0,
+          'php_code' => 0,
+          'plain_text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'email' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 0,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 9,
     ),
   );
 
@@ -1242,6 +1289,7 @@ function collabco_core_field_default_field_instances() {
   t('I agree to and understand the guidelines on creating a topic');
   t('Last Name');
   t('Only make this available to the group(s):');
+
   t('Personal Bio');
   t('This information will not be visible to anyone except site administrators.');
   t('Upload files or media to share with one or more groups');

@@ -155,6 +155,10 @@ function collabco_organisation_views_default_views() {
   $handler->display->display_options['style_options']['class'] = 'unstyled';
   $handler->display->display_options['style_options']['wrapper_class'] = '';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
   /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
   $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
@@ -355,111 +359,22 @@ function collabco_organisation_views_default_views() {
   $handler->display->display_options['arguments']['gid']['validate_options']['access'] = TRUE;
   $handler->display->display_options['path'] = 'node/%/organisations';
 
-  /* Display: Members */
-  $handler = $view->new_display('block', 'Members', 'mem_block');
-
-  /* Display: Organisation Sidebar */
-  $handler = $view->new_display('block', 'Organisation Sidebar', 'organisation_sidebar');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Website */
-  $handler->display->display_options['fields']['field_website']['id'] = 'field_website';
-  $handler->display->display_options['fields']['field_website']['table'] = 'field_data_field_website';
-  $handler->display->display_options['fields']['field_website']['field'] = 'field_website';
-  $handler->display->display_options['fields']['field_website']['label'] = '';
-  $handler->display->display_options['fields']['field_website']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_website']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_website']['click_sort_column'] = 'url';
-  /* Field: Content: Organisation Image */
-  $handler->display->display_options['fields']['field_organisation_image']['id'] = 'field_organisation_image';
-  $handler->display->display_options['fields']['field_organisation_image']['table'] = 'field_data_field_organisation_image';
-  $handler->display->display_options['fields']['field_organisation_image']['field'] = 'field_organisation_image';
-  $handler->display->display_options['fields']['field_organisation_image']['label'] = '';
-  $handler->display->display_options['fields']['field_organisation_image']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_organisation_image']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_organisation_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_organisation_image']['empty'] = '<img src="/sites/default/files/placeholder1.jpg" />';
-  $handler->display->display_options['fields']['field_organisation_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_organisation_image']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
-  );
-  /* Field: Content: Address */
-  $handler->display->display_options['fields']['field_address']['id'] = 'field_address';
-  $handler->display->display_options['fields']['field_address']['table'] = 'field_data_field_address';
-  $handler->display->display_options['fields']['field_address']['field'] = 'field_address';
-  $handler->display->display_options['fields']['field_address']['label'] = '';
-  $handler->display->display_options['fields']['field_address']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_address']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_address']['click_sort_column'] = 'country';
-  $handler->display->display_options['fields']['field_address']['settings'] = array(
-    'use_widget_handlers' => 1,
-    'format_handlers' => array(
-      'address' => 'address',
-    ),
-  );
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div>
-<div class="orgimg"> [field_organisation_image]</div><br> 
-<div class="orgwebsite-label"><b>Website</b></div>
-<div class="orgwebsite">[field_website]</div>
-<br>
-<div class="orgaddress-label"><b>Address</b></div>
-<div class="orgaddress">[field_address]</div>
-</div>
-';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Nid */
-  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['table'] = 'node';
-  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
-  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['nid']['validate']['type'] = 'node';
-  $handler->display->display_options['arguments']['nid']['validate_options']['types'] = array(
-    'organisation' => 'organisation',
-  );
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'organisation' => 'organisation',
-  );
-  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Display: Member Organisations */
+  $handler = $view->new_display('page', 'Member Organisations', 'page_1');
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = 'Welcome to the [site-name] members-only community.  Please browse through the list of companies that have been confirmed as [site-name] members.  If you see member information that is out of date or incorrect, please let us know at [site-email]';
+  $handler->display->display_options['header']['area']['format'] = 'email';
+  $handler->display->display_options['path'] = 'member-organisations';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Member Organisations';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'menu-top-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
   $export['member_organisations'] = $view;
 
   return $export;

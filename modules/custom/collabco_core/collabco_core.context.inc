@@ -26,9 +26,9 @@ function collabco_core_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'menu-menu-meta-secondary-menu' => array(
+        'menu-menu-top-menu' => array(
           'module' => 'menu',
-          'delta' => 'menu-meta-secondary-menu',
+          'delta' => 'menu-top-menu',
           'region' => 'header_top_middle',
           'weight' => '-10',
         ),
