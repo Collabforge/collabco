@@ -345,10 +345,10 @@ function collabco_message_views_default_views() {
   $handler->display->display_options['relationships']['user']['table'] = 'message';
   $handler->display->display_options['relationships']['user']['field'] = 'user';
 
-  /* Display: Activity Feed */
-  $handler = $view->new_display('block', 'Activity Feed', 'block_2');
+  /* Display: Activity Feed Page */
+  $handler = $view->new_display('page', 'Activity Feed Page', 'activity_feed_page');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Activity Feed';
+  $handler->display->display_options['title'] = 'Activity Stream';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: User: Picture */
   $handler->display->display_options['fields']['picture']['id'] = 'picture';
@@ -403,11 +403,8 @@ function collabco_message_views_default_views() {
   $handler->display->display_options['fields']['message_render_2']['label'] = '';
   $handler->display->display_options['fields']['message_render_2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['message_render_2']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['message_render_2']['alter']['text'] = '<div class="commentbubble">
-</div>
-<div class="bubble_border">
-  <p>[message_render_1]
-  [message_render_2]</p>
+  $handler->display->display_options['fields']['message_render_2']['alter']['text'] = '<div class="comment_border">
+  [message_render_1]
 </div>';
   $handler->display->display_options['fields']['message_render_2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['message_render_2']['partials'] = 1;
@@ -418,16 +415,15 @@ function collabco_message_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="activity-item row-fluid">
-  <div class="user-picture-small span2">
+  <div class="user-picture-small span1">
     [picture]
   </div>
-  <div class="activity-details span10">
-    <p>[message_render]</p>
-    <span class="placeholder">[timestamp]</span>
-    <div class="activity-body">
-      [message_render_2]
+  <div class="activity-details span11">
+    [message_render]
+    [timestamp]
+    <br>
+    [message_render_2]
     </div>
-  </div>
 </div>
 ';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
@@ -448,6 +444,7 @@ function collabco_message_views_default_views() {
   $handler->display->display_options['filters']['type_1']['value'] = array(
     'conversation' => 'conversation',
   );
+  $handler->display->display_options['path'] = 'activity-stream';
 
   /* Display: Recent Comments of News Update */
   $handler = $view->new_display('block', 'Recent Comments of News Update', 'block_of_newsupdate_comments');
@@ -491,6 +488,114 @@ function collabco_message_views_default_views() {
   $handler->display->display_options['filters']['type_1']['relationship'] = 'field_node_ref_target_id';
   $handler->display->display_options['filters']['type_1']['value'] = array(
     'news_update' => 'news_update',
+  );
+
+  /* Display: Activity Feed Block */
+  $handler = $view->new_display('block', 'Activity Feed Block', 'activity_feed_block');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '<strong>Your Feed</strong>&nbsp;&nbsp; from content you\'re following';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No activity yet';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: User: Picture */
+  $handler->display->display_options['fields']['picture']['id'] = 'picture';
+  $handler->display->display_options['fields']['picture']['table'] = 'users';
+  $handler->display->display_options['fields']['picture']['field'] = 'picture';
+  $handler->display->display_options['fields']['picture']['relationship'] = 'user';
+  $handler->display->display_options['fields']['picture']['label'] = '';
+  $handler->display->display_options['fields']['picture']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['picture']['image_style'] = 'user_thumb_small';
+  /* Field: Message: Render message (Get text) */
+  $handler->display->display_options['fields']['message_render']['id'] = 'message_render';
+  $handler->display->display_options['fields']['message_render']['table'] = 'message';
+  $handler->display->display_options['fields']['message_render']['field'] = 'message_render';
+  $handler->display->display_options['fields']['message_render']['label'] = '';
+  $handler->display->display_options['fields']['message_render']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['message_render']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['message_render']['alter']['max_length'] = '500';
+  $handler->display->display_options['fields']['message_render']['alter']['html'] = TRUE;
+  $handler->display->display_options['fields']['message_render']['element_label_type'] = 'h5';
+  $handler->display->display_options['fields']['message_render']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['message_render']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['message_render']['partials'] = 1;
+  $handler->display->display_options['fields']['message_render']['partials_delta'] = '0';
+  /* Field: Message: Timestamp */
+  $handler->display->display_options['fields']['timestamp']['id'] = 'timestamp';
+  $handler->display->display_options['fields']['timestamp']['table'] = 'message';
+  $handler->display->display_options['fields']['timestamp']['field'] = 'timestamp';
+  $handler->display->display_options['fields']['timestamp']['label'] = '';
+  $handler->display->display_options['fields']['timestamp']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['timestamp']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['timestamp']['element_type'] = 'p';
+  $handler->display->display_options['fields']['timestamp']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['timestamp']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['timestamp']['date_format'] = 'time ago';
+  /* Field: Message: Render message (Get text) */
+  $handler->display->display_options['fields']['message_render_1']['id'] = 'message_render_1';
+  $handler->display->display_options['fields']['message_render_1']['table'] = 'message';
+  $handler->display->display_options['fields']['message_render_1']['field'] = 'message_render';
+  $handler->display->display_options['fields']['message_render_1']['label'] = '';
+  $handler->display->display_options['fields']['message_render_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['message_render_1']['alter']['max_length'] = '110';
+  $handler->display->display_options['fields']['message_render_1']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['message_render_1']['alter']['html'] = TRUE;
+  $handler->display->display_options['fields']['message_render_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['message_render_1']['partials'] = 1;
+  $handler->display->display_options['fields']['message_render_1']['partials_delta'] = '1';
+  /* Field: Message: Render message (Get text) */
+  $handler->display->display_options['fields']['message_render_2']['id'] = 'message_render_2';
+  $handler->display->display_options['fields']['message_render_2']['table'] = 'message';
+  $handler->display->display_options['fields']['message_render_2']['field'] = 'message_render';
+  $handler->display->display_options['fields']['message_render_2']['label'] = '';
+  $handler->display->display_options['fields']['message_render_2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['message_render_2']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['message_render_2']['alter']['text'] = '<div class="comment_border">
+  [message_render_1]
+</div>';
+  $handler->display->display_options['fields']['message_render_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['message_render_2']['partials'] = 1;
+  $handler->display->display_options['fields']['message_render_2']['partials_delta'] = '2';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="activity-item row-fluid">
+  <div class="user-picture-small span1">
+    [picture]
+  </div>
+  <div class="activity-details span11">
+    [message_render]
+    [timestamp]
+    <br>
+    [message_render_2]
+    </div>
+</div>
+';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Message: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'message';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'create_comment' => 'create_comment',
+  );
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+  $handler->display->display_options['filters']['type_1']['table'] = 'node';
+  $handler->display->display_options['filters']['type_1']['field'] = 'type';
+  $handler->display->display_options['filters']['type_1']['relationship'] = 'field_node_ref_target_id';
+  $handler->display->display_options['filters']['type_1']['value'] = array(
+    'conversation' => 'conversation',
   );
   $export['recent_activity'] = $view;
 
