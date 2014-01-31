@@ -115,6 +115,10 @@ projects[field_collection_fieldset][type] = module
 projects[field_collection_fieldset][subdir] = contrib
 projects[field_collection_fieldset][version] = 2.3
 
+projects[field_group][type] = module
+projects[field_group][subdir] = contrib
+projects[field_group][version] = 1.3
+
 projects[filefield_nginx_progress][type] = module
 projects[filefield_nginx_progress][subdir] = contrib
 projects[filefield_nginx_progress][version] = 2.3
