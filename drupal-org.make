@@ -367,6 +367,10 @@ libraries[datatables-responsive][download][revision] = 21ebeb4ea81430afce0fd17e9
 
 libraries[profiler][download][type] = get
 libraries[profiler][download][url] = http://ftp.drupal.org/files/projects/profiler-7.x-2.0-beta2.tar.gz
+; Patch to allow install profile enabling to enable dependencies correctly.
+libraries[profiler][patch][1093420] = http://drupal.org/files/1093420-22.patch
+; Patch to correct block rebuilding performance issue
+libraries[profiler][patch][1693336] = http://drupal.org/files/1693336_8.patch
 
 libraries[jquery.cycle][download][type] = git
 libraries[jquery.cycle][download][url] = https://github.com/malsup/cycle.git
