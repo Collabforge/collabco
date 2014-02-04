@@ -1,13 +1,14 @@
 name = Collabco base theme
 base theme = open_framework
-description = Tableless, multi-column subtheme provided by <a href="http://webservices.stanford.edu">Stanford Web Services</a> as a subtheme of the <a href="http://openframework.stanford.edu">Open Framework theme</a>.
+description = Collabco based websites use this base theme.
 core = 7.x
-version = 1.0
+version = 1.1
 
 stylesheets[all][] = css/bootstrap.css
 stylesheets[all][] = css/bootstrap-responsive.css
 stylesheets[all][] = css/style.css
 scripts[] = js/script.js
+stylesheets[all][] = css/meta.css
 
 regions[admin_shortcuts] = Admin Shortcuts (Authenticated Users Only)
 regions[header] = Header

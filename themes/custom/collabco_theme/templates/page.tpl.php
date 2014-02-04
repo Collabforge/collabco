@@ -18,8 +18,8 @@
 <!-- new Header Top block -->
 <?php if (($page['header_top_middle']) || ($page['search_box']) || ($page['header_bottom_left']) || ($page['header_bottom_right'])): ?>
   <div id="header" class="clearfix header" role="banner">
-  <div class="container" id="header_container">
-    <div class="row-fluid" id="header_top" >
+    <div class="container" id="header_container">
+      <div class="row-fluid" id="header_top" >
         <?php if ($logo): ?>
         <div id="logo" class="span4 site-logo"> <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"> <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" role="presentation" /> </a>
         </div>
@@ -32,8 +32,8 @@
         <div id="search-box" class="span2 last"> <?php print render($page['search_box']); ?>
         </div>
         <?php endif; ?>
-    </div>
-    <div class="row-fluid" id="header_bottom">
+      </div>
+      <div class="row-fluid" id="header_bottom">
         <?php if ($page['header_bottom_left']): ?>
         <div class="span6 "> <?php print render($page['header_bottom_left']); ?>
         </div>
@@ -42,15 +42,17 @@
         <div id="header_bottom_right" class="span3 offset3 last"> <?php print render($page['header_bottom_right']); ?>
         </div>
         <?php endif; ?>
+      </div>
     </div>
-   <?php if ($page['header']): ?>
+  </div>
+
+     <?php if ($page['header']): ?>
    <div class="row-fluid">
         <div id="header-content" class="row-fluid header-content"><?php print render($page['header']); ?></div>
-    </div>
-        <!-- /#header-content -->
+   </div>
+
    <?php endif; ?>
- </div>
-</div>
+        <!-- /#header-content -->   
 <?php endif; ?>
 <!-- End of new Header Top block -->
 
@@ -67,12 +69,12 @@
     <?php endif; ?>
     <div id="main-content" class="row main-content">
       <?php if ($page['sidebar_first']): ?>
-      <div id="sidebar-first" class="sidebar span4 site-sidebar-first">
+      <div id="sidebar-first" class="sidebar span3 site-sidebar-first">
         <div class="row-fluid"><?php print render($page['sidebar_first']); ?></div>
       </div>
       <!-- /#sidebar-first -->
       <?php endif; ?>
-      <div id="content" class="mc-content <?php if (($page['sidebar_first']) && ($page['sidebar_second'])): print 'span6'; elseif (($page['sidebar_first']) || ($page['sidebar_second'])): print 'span8'; else: print 'span12'; endif; ?>">
+      <div id="content" class="mc-content <?php if (($page['sidebar_first']) && ($page['sidebar_second'])): print 'span6'; elseif (($page['sidebar_first']) || ($page['sidebar_second'])): print 'span9'; else: print 'span12'; endif; ?>">
         <div id="content-wrapper" class="content-wrapper">
           <div id="content-head" class="row-fluid content-head">
             <div id="highlighted" class="clearfix"><?php print render($page['highlighted']); ?></div>

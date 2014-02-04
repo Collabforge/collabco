@@ -96,20 +96,21 @@
     <?php print ' by ' . $name; ?>
       </div>
     <?php endif; ?></div><div class="clearfix"></div>
-
-    <div class="contentarticle"<?php print $content_attributes; ?>>
-    <?php 
-      if (empty($content['field_about'])) {
-        // @todo: use proper function
-        $website = reset($content['field_website']['#items']);
-        $url = $website['url'];
-        print "Learn more about this organisation <a href='$url'>here</a>.";
-      }
-      else {
-        print render($content['field_about']); 
+    <?php
+      $may_edit = user_access('edit any conversation content') || (user_access('edit own conversation content') && $uid == $user->uid);
+      if ($may_edit) {
+        print "<div class='edit_your_topic'> <img src='/sites/all/themes/custom_theme/images/edit_button.png'> <a href='/node/$nid/edit'>Edit this topic</a></div><br><br>";
       }
     ?>
+    <div class="contentarticle"<?php print $content_attributes; ?>>
+      <?php
+        // We hide the comments and links now so that we can render them later.
+        hide($content['comments']);
+        hide($content['links']);
+        print render($content);
+      ?>
     </div>
+
 
     <?php print render($content['links']); ?>
 
@@ -117,5 +118,4 @@
 
   </article>
 <?php endif; ?>
-<br>
 
