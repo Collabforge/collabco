@@ -129,7 +129,7 @@ projects[flag][version] = 3.2
 
 projects[flag_hide][type] = module
 projects[flag_hide][subdir] = contrib
-projects[flag_hide][version] = 1.0-alpha2
+projects[flag_hide][version] = 1.0-beta2
 
 projects[google_analytics][type] = module
 projects[google_analytics][subdir] = contrib
