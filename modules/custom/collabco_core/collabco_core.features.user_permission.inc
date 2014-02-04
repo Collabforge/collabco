@@ -395,5 +395,12 @@ function collabco_core_user_default_permissions() {
     'module' => 'filter',
   );
 
+  // Exported permission: administer realname.
+  $permissions['administer realname'] = array(
+    'name' => 'administer realname',
+    'roles' => array(),
+    'module' => 'realname',
+  );
+
   return $permissions;
 }
